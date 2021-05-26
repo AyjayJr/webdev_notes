@@ -26,3 +26,47 @@ addEventListener() takes two arguments, what event to listen for followed by
 a function to execute when that event occurs.
 This will allow us to use multiple different callbacks for a single event.
 
+This Keyword
+---
+You can use the keyword this to create general functionality for eventlisteners.
+This will refer to the element that evoked the callback function from an event.
+This can be used to duplicate functionality for different types of elements.
+
+Event Object and Keyboard Event
+---
+The event object contains information about how and where an event was evoked.
+This object is automatically passed to event handler callback functions.
+This is important for Keyboard events bc it will contain information about which 
+key was pressed and we usually want that for keyboard events.
+Keycode and key in the event object contain the information about what key was
+pressed.
+To access these you must capture e or evt in the arguments of your callback.
+Then use e.key or e.keyCode.
+Key gives information about what character was generated.
+KeyCode gives information about what key on the keyboard was pressed.
+
+Form Events
+---
+The default action for forms is to submit and request.
+We can listen for this submit and changed the default behavior.
+Think about adding a comment to a page, the form is not submitted elsewhere rather
+it changes something about the page that you're currently on.
+On the event object there is a method called preventDefault().
+This will stop the default form behavior from occurring.
+To select and recieve input from a form each form object has an elements properties
+which will contain the names of all the input fields.
+e.g. form.elements.username will retrieve the username object from the form.
+The elements object is iterable and stores each input in order and by name attr.
+Furthermore adding a .value to the end will get you whatever value was entered
+into the form.
+
+Change/Input Events
+---
+Change event will only fire when you you click away from an input and it is
+different than it was before.
+This is counterintuitive to it's name because it doesn't update live changes.
+Input event fires whenever a value is added to the input.
+e.g. typed or copy pasted characters.
+Avoid using keyup or keydown because it doesn't fire w copy/paste or talk to text
+and it also considers keys that don't modify the input value e.g. arrows/shift.
+
