@@ -1,0 +1,28 @@
+== DOM Events ==
+Responding to user inputs and actions such as:
+- clicks
+- drags
+- hovers
+- scrolls
+- etc.
+
+Inline Events
+---
+You can add a property directly to your html element through attributes.
+Attributes such as onclick, onkeyup, etc. will create event handlers.
+Not a great approach.
+
+JS Properties
+---
+In javaScript you can select an html element and add handlers that way.
+Similar to how you are able to change attributes from javaScript.
+Set onproperty to a function/arrow function.
+Better but still not ideal.
+Does not allow for multple callback functions on the same property.
+
+Event Listener
+---
+addEventListener() takes two arguments, what event to listen for followed by
+a function to execute when that event occurs.
+This will allow us to use multiple different callbacks for a single event.
+
