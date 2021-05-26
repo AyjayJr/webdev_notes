@@ -1,0 +1,62 @@
+== Functions ==
+Reusable chunks of code.
+You must first define code before you run it.
+
+Define
+---
+function funcName() {
+  // do something
+}
+
+Run
+---
+funcName()
+
+Arguments
+---
+Inputs for your functions.
+Add a variable name to your function declaration to accept arguments.
+function funcName(person) {}
+Parameters are the variable names you set, arguments are the values passed to you.
+Separate multiple parameters with a comma in the declaration.
+
+Return
+---
+Return values can be stored to be used after the function executes.
+Return also stops the execution of the function.
+Can only return a single value.
+
+Function Expressions
+---
+Another way to declare a function.
+const add = function (x, y) {
+   return x + y;
+}
+JS treats functions like any other variable.
+Functions can be passed as arguments or used as a return value.
+
+Higher Order Functions
+---
+Functions that operate on/with other functions.
+They can accept other functions as arguments and/or return a function.
+When passing a function as an argument don't put the parantheses.
+To return a function you can either captrue it in a function expresion or just
+declare it normally after the return statement.
+A common use for higher order functions is generating a function based upon some
+input.
+These functions that create other functions are called factory functions.
+
+Methods
+---
+We can add functions as properties on objects, these are called methods.
+
+This Keyword
+---
+Use this keyword to access other properties on the same object.
+The object that it refers to changes depending on the invocation context.
+
+Try/Catch
+---
+Has to do with catching errors and stopping them from crashing your code.
+Wrap code you want to execute in a try block then use catch as a fallback.
+In catch you have access to a special variable called e which is an error log.

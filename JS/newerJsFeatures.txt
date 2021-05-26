@@ -1,0 +1,72 @@
+== Newer Features ===
+Default Parameters
+---
+Set a default parameter if the user calls your method without any arguments.
+To do this add an equal sign and a default parameter right in the parameter list of the function.
+You should always have the parameters that have a default value come after parameters without defaults.
+
+Spread
+---
+Spread will take an iterable object and separate it into individual elements.
+Syntax is "..."
+e.g. if you have an array of numbers called nums.
+Math.max(...nums);
+That will separate nums into individual values for max to work with.
+This also works for strings, it will separate a string into separate characters.
+With object literals spread will copy properties from one object to the other.
+When there is a property conflict the order will determine which value for a property gets used.
+Spreading into objects can be used when copying objects, which happens frequently.
+
+Rest
+---
+Within functions there is an object called arguments that holds all the arguments passed to the function.
+The arguments object is similar to an array but lacks a lot of array functionality.
+Rest has the same syntax as spread "..."
+It is used in the parameter list to collect the arguments passed into an array.
+
+Destructuring Arrays
+---
+A short syntax to unpack values from arrays or properties from an object.
+Wrap variable names in square brackets and set it equal to the array you want to deconstruct.
+e.g.
+const nums = [ 1, 2, 3, 4];
+const [first, second ] = nums;
+first = 1, second = 2;
+You can use this in conjuction with the rest operator to capture the rest of the values.
+e.g.
+const nums = [ 1, 2, 3, 4];
+const [first, second, ...otherNums ] = nums;
+first = 1, second = 2, otherNums = [3, 4];
+Notice order matters in which values get which variable name.
+
+Destructuring Objects
+---
+It's more common to use destructuring to single out individual object properties.
+Opposed to destructuring arrays the order doesn't matter, it is dependant on keys.
+e.g.
+const user = {
+   firstName  : 'Harvey',
+   lastName   : 'Dent',
+   occupation : 'Villain'
+}
+const {firstName, lastName, occupation} = user;
+This stores the properties into their own individual variables.
+If you want the new variable name to be different from the key name you use a colon.
+e.g.
+const {firstName: name, occupation: job} user; >> name = 'Harvey', job = 'Villain'
+To create a default value for a variable that may not be in the original object use '='.
+e.g.
+const {firstName: name, died = 'n/a'} = user; >> name = 'Harvey', died = 'n/a'.
+If there already exists a property with the name died it will be overwrote.
+
+Destructuring Parameters
+---
+Used commonly when dealing with object arguments.
+Similar syntax to destructuring objects except it's done in the parameter list of your fuction declaration.
+e.g.
+function fullName({firstName, lastName}) {
+   return `${firstName}, ${lastName}`;
+}
+In the above example we are expecting an object and instead of dealing with the whole object we destructure
+it on the way into the function and single out the variable we are interested in.
+You can also destructure array objects in the parameter list with the same syntax.

@@ -1,0 +1,33 @@
+== Object Literals ==
+Basics
+---
+Objects are collections of properties.
+Properties are key-value pairs.
+Rather than accessing data using an index, we use custom keys.
+e.g.
+const fitBitData = {
+  totalSteps       : 308727,
+  totalMiles       : 211.7,
+  avgCalorieBurn   : 5775,
+  workoutsThisWeek : '5 of 7',
+  avgGoodSleep     : '2:13'
+};
+
+Accessing Data
+---
+To access data use square brackets and quotes for the key with the value you want.
+e.g. fitBitData['totalSteps'] will return 308727.
+You can also use a dot to access the key.
+e.g. fitBitData.totalSteps will also return 308727.
+Important to know that all valid keys are converted to strings.
+When using a variable you need to use square brackets.
+e.g. let birthYear = 1999;
+     years[birthYear] will evaluate to years['1999']
+     * the same cannot be done with the dot syntax. *
+To modify the value of a key just access and set to something different.
+e.g. fitBitData.totalSteps = 500000;
+
+Arrays + Objects
+---
+It's possible to nest objects within arrays
+Also possible to nest objects within other objects.

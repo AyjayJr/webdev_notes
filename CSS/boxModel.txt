@@ -1,0 +1,29 @@
+== Width/Height ==
+Controls the width/height of border-box.
+
+== Border/Border Radius ==
+Border-width controls the thickness of the border.
+Border-style controls the line style (dashed, solid, etc).
+Border-color controls the color of the border.
+Border shorthand can be used to set all three at once.
+Pixels are the most commonly used unit for borders.
+Set box-sizing to border-box to account for border in width/height.
+Border-radius is used to round the corners of your border.
+Border-radius 50% will create a circle.
+
+== Padding ==
+The space between the content and the border.
+Padding shorthand will set top right bottom left (clockwise).
+You can also use two values to set vertical then horizontal.
+
+== Margin ==
+The space between two content boxes on the outside of the border.
+Margin shorthand works the same way as padding shorthand.
+
+== Display Property ==
+Inline elements do not take up an entire line of space.
+- Width and height are ignored for inline elements.
+- Padding is respected horizontally but doesn't push content out of the way.
+- Margin is respected horizontally but only on the line where the element sits.
+Block elements push all other elements onto a new line.
+Inline-Block elements behave like an inline element except width/height/margin are respected.

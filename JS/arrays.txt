@@ -1,0 +1,66 @@
+== Arrays ==
+Basics
+---
+Arrays are an ordered collection of values.
+Arrays do not have to contain only one specific type.
+Set array values in square brackets.
+e.g. let array = [1, 2, 3, 'dog', true, false];
+Access array indicies by using square brackets and a number.
+e.g. array[0] >> 1
+You can use array index to change values at certain place.
+
+Push/Pop/Shift/Unshift
+---
+Push adds to the end of an array.
+Push's return value is the new length of the array.
+Pop removes from the end of an array.
+Pop's return value is the value that is removed from the array.
+Shift removes from the start of the array.
+Shift's return value is the value that was removed.
+Unshift adds to the start of the array.
+Unshift's return value is the new length of the array.
+
+Misc Array Methods
+---
+Concat merges two arrays into a new third array.
+e.g. const array1 = ['a', 'b', 'c'];
+     const array2 = ['d', 'e', 'f'];
+     const array3 = array1.concat(array2);
+Includes tells us whether a value is found in an array.
+Returns a boolean value.
+Indexof returns the value of the index where the first matching value is found.
+Reverse reverses the array, it is a destructive method and changes og array.
+
+Slice/Splice/Sort
+---
+Slice returns a portion of an array.
+Takes two values the start and end indicies.
+If passed no value slice will just create a copy of the array.
+Negative indicies will start from the end of the array.
+Splice adds new elements to an array at a specified place.
+Takes 3 values, start point, delete count, and element to be inserted.
+Splice returns the values that it deleted.
+If delete count is 0 splice will just insert the value and return empty array.
+Sort array sorts by utf-16 code unit values. (pretty jank)
+
+Equality Testing
+---
+JS compares arrays by memory address as opposed to the contents.
+Useless to try to compare arrays with double/triple equals.
+
+Const + Arrays
+---
+Const is commonly used with arrays because you are still able to modify the array.
+Const just stops from changing the memory address of the array.
+Or from creating a new reference to a different array.
+
+Nested Arrays
+---
+We can store arrays inside of other arrays.
+e.g.
+const nums = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8]
+]
+Chain together square brackets to access different parts of the nested arrays.

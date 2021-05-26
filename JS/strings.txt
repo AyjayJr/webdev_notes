@@ -1,0 +1,35 @@
+Strings
+---
+Strings represent words and must be wrapped in quotations.
+Can use either single or double quotes but cannot mix the two.
+Use backslash '\' to escape special characters.
+Strings are indexed like arrays.
+String[n] will get the nth index of String.
+You can use '+' operator to concatenate a string.
+When doing concatenation between a number and a string JS will try to make them
+a common type.
+
+String Methods
+---
+Methods are built in actions that we can perform on strings.
+Examples are:
+- Search within string.
+- Replacing part of a string.
+- Changing the casing of a string.
+Syntax is thing.method().
+A non-destructive method doesn't change the original string.
+It's possible to chain multiple methods together.
+
+Methods w Arguments
+---
+Some methods require arguments to function.
+Examples are:
+- indexOf(arg)
+- searchFor(arg)
+
+String Template Literals
+---
+Allows you to create a string with embedded expressions.
+e.g. `I counted ${3 + 4} sheep.` > I counted 7 sheep.
+For this to work you must use the backtick character not single quotes!
+Useful for embedding variables in strings.

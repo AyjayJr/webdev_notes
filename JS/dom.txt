@@ -1,0 +1,109 @@
+== The DOM ==
+DOM stands for document object model.
+DOM is a JS representation of your webpage that you can interact with.
+When our browser loads the html/css, javascript creates bunch of objects that represent those styles.
+Every element gets its own object that becomes represented as nodes on a tree.
+The document object is the root node of the tree.
+It contains representations of all the content on a page plus tons of useful methods and properties.
+
+Selecting DOM Elements
+---
+These methods are all built in to the document object.
+document.getElementById() selects an element whose id property matches the specified string.
+Returns an object that represents that element.
+If no element can be found then it returns null.
+document.getElementsByTagName() finds all the elements whose tag matches the specified string.
+document.getElementsByTagName() finds all the elements whose class matches the specified string.
+Both of these have return values of html collections.
+Html collections can single out individual items using square bracket notation.
+Collections are iterable collections but can't use array specific methods.
+Collections are of type Element that represents an html element in JS.
+If no elements are found by these elements they return an empty collection.
+
+querySelector()
+---
+Query selector is a newer all-in-one method to select a single element.
+If there are multiple items that match the query it will only give you the
+first matching element.
+querySelectorAll() will return a collection of all matching elements.
+querySelector allows you to search by element name, class, id, and attribute.
+It's even possible to use descendat selectors as well, pretty much any selector
+that you can use in css you can use in these methods.
+
+Maipulating DOM Elements
+---
+classList
+getAttribute()
+setAttribute()
+appendChild()
+append()
+prepend()
+removeChild()
+remove()
+createElement
+innerText
+textContent
+innerHTML
+value 
+parentElement
+children
+nextSibling
+previousSibling
+style
+Ones without parantheses are properties and with parantheses are methods.
+
+innerText/textContent/innerHTML
+---
+innerText allows you to manipulate the text that is between the HTML tags.
+Select an element and set it's innerText to whatever you would like.
+textContent is similar to innerText except it will show everything even if
+display is set to none. (i.e. innerText is sensitive to what is displayed on page)
+Both of these properties will overwrite any existing HTML inside the element.
+innerHTML will return the entirety of the markup.
+This allows you to change and create HTML markup from JS.
+
+Manipulating Attributes
+---
+Attributes can be accessed directly with dot notation at the end of a selected
+element.
+You can also you getAttribute().
+There are slight differences between the two, getAttribute gets the direct text
+content from the HTML and .href for example will use the JS object to get the 
+attributes content.
+
+Changing Styles
+---
+Style property of Html elements in javascript will not have the current styles.
+It only recognizes inline styles.
+It is still possible to use this style object to change styles, it will be applied
+as inline styles.
+The best way to apply multiple styles is to use css classes. Apply/unapply styles
+through assignment of classes to an element.
+All styles should be in quotes for them to be valid javascript.
+All style names are camelCased instead of hyphenated.
+e.g. document.querySelector('#container').style.textAlign = 'center';
+
+Changing Classes
+---
+To set a class to an element, one way is to use setAttribute().
+The downside to setAttribute() is you will only be able to set one attribute.
+The better way to set classes is to use the classlist.
+Classlist is an object that allows us to control and retrieve the classes.
+Classlist has built-in methods such as add().
+The toggle() method is used frequently to toggle classes on and off.
+
+Creating Elements
+---
+document.createElement('img') will create a new element.
+It does not tell this element where to go on the page.
+There are two ways to specify where you want to append this new img.
+Append, and Append child.
+For append child you must specify what you want the parent element to be.
+e.g. document.body.appenChild('img');
+Plain append is a newer feature and is more flexible.
+You can append plain text and it will append it to elements unlike appendChild.
+Another difference is that you can append two or more things.
+Prepend is another newer feature that is similar to appendChild except it will
+append an element as the first child of some element.
+insertAdjacentElement allows you to add new elements as adjacent elements.
+adjacent element requires you to pass it a position and an element to insert.

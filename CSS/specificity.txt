@@ -1,0 +1,18 @@
+== The CSS Cascade ==
+The order that your styles are declared in and linked to matter.
+The last style declared is the winner.
+This also applies to if you have multiple stylesheets, the styles in the last one linked
+override styles in earlier linked sheets.
+
+== Specificity ==
+Specificity is how the browser decides which rules to apply when multiple rules could apply
+to the same element.
+It is a measure of how specific a given selector is. The more specific one wins.
+Generally the order of specificity goes ID > Class > Element.
+IDs will beat Classes and Classes will beat Elements.
+Inline styles will beat all other styles, not reccomended.
+Style declarations can be declared !important to beat all others, also not reccomended.
+
+== Inheritance ==
+Some CSS properties will be inherited by child elements.
+Some elements don't inherit things by default, use inherit keyword to force inheritance.

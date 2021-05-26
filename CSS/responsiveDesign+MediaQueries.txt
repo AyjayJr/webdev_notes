@@ -1,0 +1,12 @@
+== Responsive Design ==
+Making a single website/app that can respond to multiple viewport widths
+Media queries are used to achieve this.
+Media queries allow us to modify stlyes depending on a screen width or device type.
+
+== Media Queries ==
+All media queries begin with @media(paramenters).
+e.g. @media(min-width: 800px) {}
+Min-width applies a style at a minimum of 800px and upwards.
+Max-width applies a style at a maximim of 800px or less.
+You can combine media queries with the 'and' keyword.
+Orientation keyword can target landscape/portrait mode on mobile devices.

@@ -1,0 +1,76 @@
+== Flex Box ==
+Basics
+---
+To activate flexbox set display property to flex on container element.
+
+Flex Model
+---
+Two axes in a flexbox, main and cross.
+By default the main axis is horizontal and the cross is vertical.
+
+Flex-direction
+---
+This property is used to change the main and cross axes.
+- Row is set by default where main axis is horizontal (going from left to right) and cross vertical.
+- Row-reverse is the same axes as row, but the items will start from right to left.
+- Column will swap the axes (e.g. main=vertical, cross=horizontal), and go from top to bottom.
+- Column-reverse has the same axes as column, but will go from bottom to top.
+
+Justify-content
+---
+Determines how the content is distributed across the main axis.
+- Flex-start will move content to the start of the main axis.
+- Flex-end will move the content to the end of the main axis.
+- Center will move content to the center of the main axis.
+- Space-between will distribute all extra space between the elements but not on the outside edges.
+- Space-around will distribute all extra space around each element.
+- Space-evenly distributes space evenly between all elements and the elements and the container.
+Note that all these rules are dependant on what flex direction is set to.
+
+Flex-wrap
+---
+Determines whether elements are going to wrap along the main axis onto a new line/column.
+Only two keywords you need to know:
+- Wrap will wrap from left to right if cross=horizontal and top to bottom if cross=vertical.
+- Wrap-reverse will wrap from right to left if cross=horizontal and bottom to top if cross=vertical.
+
+Align-items
+---
+Determines how to distribute space along the cross axis.
+- Flex-start will align content at the beginning of the cross axis. (Default)
+- Flex-end will align content at the end of the cross axis.
+- Center will align along the center of cross axis.
+- Baseline will align content based on the baseline of text.
+
+Align-content
+---
+Used to distribute space along the cross axis but only when there's multiple rows/columns.
+Only works when flex-wrap is enabled.
+Uses pretty much all the same keywords that we've seen before.
+- Flex-start
+- Flex-end
+- Center
+- Space-between
+- Space-evenly
+Align-self is used applied to single flex element to align itself along the cross axis.
+
+Flex sizing properties
+---
+Flex-basis determines the intial size of an element, can be a width or height depending on flex direction.
+Flex-grow determines how the elements will grow when there is extra space.
+- Accepts a unitless number.
+- Based on the proportions of the available space that you want to be taken up by an item.
+Flex-shrink determines how the elements will shrink when there isn't enough available space
+- Also accepts a unitless number
+- Tells an element how fast to shrink relative to other elements.
+Use min-width/max-width(or height depending on axes) to stop from growing/shring past a certain point.
+
+Flex shorthand
+---
+Flex allows use to set all flex properties at once.
+The order of the values is as follows:
+- For 3 values, flex-grow / flex-shrink / flex-basis.
+- For 2 unitless values, flex-grow / flex-shrink.
+- For 2 values but one has a unit, flex-grow / flex-basis.
+- For 1 unitlees value, flex-grow.
+- For 1 value with unit, flex-basis.

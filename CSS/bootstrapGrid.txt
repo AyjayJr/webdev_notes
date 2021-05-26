@@ -1,0 +1,28 @@
+== Bootstrap Grid ==
+Only works inside of a container.
+Create a row by assigning a class of row to a div.
+Each row has 12 units of space, 3 even columns = 4 unit each.
+Each row can be separated into columns by creating a div with a class of col-#.
+The # specifies how many units the element takes up on the row.
+If the number is not specified the elements will automatically split space evenly.
+
+Responsive Grid
+---
+If you add a size to col class it will only divide space after specified breakpoint.
+i.e. if you have col-md-6, the element will span the full width until the medium breakpoint
+and then it will take up 6 units of space.
+You can also add more class names to specify how much space you want an element to
+take up at different breakpoints.
+e.g. class="col-md-6 col-lg-4", this will span the entire page until the medium
+breakpoint where it will take up 6 units and then when it hits the large breakpoint
+it will take up 4 units.
+
+Alignment
+---
+Using flexbox properties you can align elements the same way you normally would
+without having to use css.
+Justify-content-start class will do what you expect.
+Align-items-end class will do the same it does in flexbox.
+This is just an easier way because all you have to do is add the class to the element
+without having to write any actual css.
+These also have the ability to distinguish between different screen sizes like the grid columns.

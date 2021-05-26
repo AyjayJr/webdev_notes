@@ -1,0 +1,43 @@
+== Comparison Operators ==
+
+Gt,Lt,Gtoe,Ltoe
+---
+These return either true or false values.
+Greater than(>), Less than(<), Greater or equal to(>=), Less than or equal to(<=).
+
+Equality
+---
+Double equals (==) checks for equality of value but not of type.
+When using double equals with different types you may get some unexpected results.
+Triple equals (===) checks for equality of value and type.
+Not equal (!=) functions similar to double equals where it doesn't care about type.
+Strict not equal (!==) cares about type.
+As a rule of thumb always use triple equals when comparing something.
+
+== Conditional Statements ==
+
+If Statement
+---
+Only runs code if a given condition is true.
+e.g. If (rating == 3) {}
+
+Else if/ Else
+---
+We know how these work.
+
+Truthy/Falsy
+---
+Falsy values:
+- false
+- 0
+- "" (empty string)
+- null
+- undefined
+- NaN
+All other values are truthy.
+When using conditionals with falsy values they will be treated as false.
+
+Logical Operators
+---
+AND, OR, NOT
+&&, ||, !

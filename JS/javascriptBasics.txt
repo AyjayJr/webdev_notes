@@ -1,0 +1,52 @@
+== Primitives Types ==
+JavaScript data types:
+- Number
+- String
+- Boolean
+- Null
+- Undefined
+- Symbol
+- BigInt
+
+Numbers
+---
+JS has only one number type.
+Numbers only have a limited number of memory space.
+JS has a number of math operations inlcuding:
+- Addition '+'
+- Subtraction '-'
+- Multiplication '*'
+- Division '/'
+- Modulo '%'
+- Exponentiaion '**' (raises a the first number to the power of the second)
+e.g. 2 ** 4 evaluates to 16
+Arithmetic follows PEMDAS rule for evaluation.
+NaN is part of the number type that represents something that is not a number.
+
+Variables
+---
+Give a name to a value and store it to be used later.
+Basic variable declaration involves the keyword "let".
+e.g. let year = 1996
+JS is dynamically typed so all data types use "let" keyword.
+"const" keyword works just like let but the value cannot be changed.
+"var" is the old way to declare variables, these days it isn't really useful.
+JS naming convention is camelCase.
+
+Booleans
+---
+Booleans are used to store a true or false value;
+We use the keywords "true" and "false" for values;
+
+Null
+---
+Intentional absence of any value.
+Must be defined by developer.
+
+Undefined
+---
+Variables that do not have an assigned value.
+
+Math Object
+---
+A collection of properties and methods for mathematical constants and functions.

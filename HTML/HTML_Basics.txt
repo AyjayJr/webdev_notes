@@ -1,0 +1,51 @@
+Misc HTML Notes
+===============
+
+Intro
+  - <p> tags and <b> tags
+  - Basics of tags
+  - Use mdn for list of all tags
+
+
+Headings
+  - Have at most 1 <h1> on your page
+  - Don't use deeper level headings <h2 - h6> for smaller font size
+  - Don't have an <h3> without an <h2>
+  - Use smaller headings to show similar levels of nesting between elements
+
+HTML Boilerplate
+  - Standardized markup that all pages need
+  - <!DOCTYPE html>
+      <html>
+        <head>
+        </head>
+        <body>
+        </body>
+      </html>
+  - <head> is the document metadata tag
+  - <title> changes name displayed in the tag and google uses it
+  - <body> all of the content of the document
+  - VSCode shortcut = ! + tab
+  - VSCode has auto formatting, ctrl + shft + p to search
+    - ctrl + alt + f
+    - set up auto formatting on save if you want
+
+List Elements
+  - <ol> ordered list
+  - <ul> unordered list
+  - <li> each item in list
+    - elements can be nested within <li>
+    - possible to nest more lists within <li>
+
+Anchor Element
+  - Must have href="" attribute to be functional link
+  - Inline tag
+
+Image Element
+  - No closing tag
+  - Use src="" attribute to link to image file
+  - Use alt="" to give accessible description of image
+
+Comments
+  - <!-- This is a comment -->
+  - VSCode comment shortcut = ctrl + /

@@ -1,0 +1,59 @@
+Element Selector
+---
+use html elemtent name to select all instances for styling.
+add comma between element names to select multiple elememt types.
+
+ID Selector
+---
+use '#' symbol to select IDs.
+IDs should only be used once in the html document.
+
+Class Selector
+---
+use '.' symbol to select classes.
+
+Descendant Selector
+---
+to select nested elements put a space between (e.g. li a {}).
+this will select all anchors that are a desendant of an list item.
+doesn't need to be the direct descendant of the element.
+
+Adjacent Selector
+---
+use '+' to select elements that are on the same level as others but come one after another.
+i.e. they are not descendants.
+
+Direct Descendant Selector
+---
+use '>' to select direct children of an element.
+opposed to the descendant selector that will choose all descendants.
+
+Attribute Selector
+---
+selects elements based on some particular attribute.
+syntax = input[type="text"] {}
+there are a couple of variants of this selector, check mdn for more info.
+
+Psuedo Classes
+---
+keyword added to a selector that specifies a special state of the selected elements.
+- :active
+- :checked
+- :first
+- :first-child
+- :hover
+- :not()
+- :nth-child()
+- :nth-of-type()
+hover is one of the most common use cases.
+active applies to things that are active (e.g. a button/link being clicked).
+nth-of-type() requires you to specify 'n' in the parantheses (e.g. nth-of-type(3)).
+- nth-of-type(3n) will choose every 3rd object.
+- odd and even are keywords that can be used as well.
+
+Psuedo Elements
+---
+Selects a particular part of the selected element.
+- ::first-letter
+- ::first-line
+- ::selection

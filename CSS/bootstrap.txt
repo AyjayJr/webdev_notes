@@ -1,0 +1,68 @@
+== Bootstrap ==
+Calls itself the world's most popular framework.
+Frameworks allow you to easily apply styles to elements by giving them a certain class.
+
+Including Bootstrap
+---
+One option is to download everything to your machine and link to it.
+The easier option is to use a CDN (content delivery network).
+CDNs are hosted versions of a stylesheet that can be accessed remotely.
+To access all features you have to include scripts as well.
+Bootstrap website has all you need to copy and paste to include in your webpage.
+
+Containers
+---
+Give a .container class to an element to have a responsive container.
+A .container-fluid is a full width container.
+Adding a size to the end of the container class will give you a container that is full width
+untill you hit the sm/md/lg breakpoint which then it will act like a normal container.
+
+Buttons
+---
+Button classes have different types, success, primary, secondary, warning, etc.
+Give buttons a class of "btn btn-primary" to give it the primary button styling and so on for the others.
+There's options for block-level buttons, outline buttons, disabled buttons.
+Consult the documentation whenever needed, don't feel the need to memorize class names.
+
+Forms
+---
+Form-group is used to group a label and an input, apply it to a div wrapping both label/input.
+Form-control is the class used on a form input itself.
+Checkboxes have their own unique syntax that contains:
+- A wrapper class of form-check
+- Input of form-check-input
+- A label of form-check-label
+Bootsrap contains it's own customized checkbox called custom-control and custom-checkbox.
+Bootstrap also contains custom radio buttons and custom toggle switches that are built
+on top of checkboxes.
+Forms have their own form-row class for the grid system that changes the default margin size.
+
+Navbar
+---
+Navbar-brand class is used for the logo on your navbar.
+Adding an image inside of the navbar brand will put your image logo on the navbar.
+Nav-links can be add by either a ul with a bunch of li's or a div with a bunch of anchors.
+A div of navbar-nav and anchors need nav-item and nav-bar-link.
+The navbar-nav div needs to be wrapped in a navbar collapse clas to make it responsive.
+Then add a navbar-expand-md/lg/sm to tell the browser when to expand the navbar links.
+Lastly you need a nav-bar toggeler to create the hamburger menu and link it to your collapsable div.
+The hamburger icon needs to have the bootstrap javascript included to be functional.
+
+Bootstrap Icons
+---
+Bootstrap icons can be copied and pasted from the icons section of the website.
+These are svgs which are scalable vector images which can be easily resized without losing fidelity.
+Font awesome is another website with a lot of svg icons you can use when you sign up.
+
+Misc. Utilities
+---
+Border utilities allow you to add css styles with a single class.
+Shadow utility can add shadows to containers.
+Spacing utilities used the syntax {property}{sides}--{size}.
+- Property is either m or p for margin or padding.
+- Sides is t/b/l/r for top bottom left right, x/y for horizontal or vertical, and black for all 4 sides.
+- Size is one of 0/1/2/3/4/5/auto where 0 is least and 5 is most.
+You can also add a breakpoint for added responsiveness such as pt-m-4.
+Display class utilities can be used to change display of items depending on screensize without media query.
+There are flexbox utilities as well to make it simpler to add flexbox.
+Cards are very useful as well as the carousel component.

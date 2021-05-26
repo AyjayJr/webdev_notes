@@ -1,0 +1,85 @@
+Tables & Forms
+==============
+
+---
+Tables
+---
+
+Tables can be used to display data in a tabular format
+Many elements that go into making a table
+
+tr, td, and th elements
+- td (table data) what goes into the table
+- tr (table row) nest around td's to signify which row they belong to  
+- th (defines header) headers need to be in their own row
+
+thead, tfoot, tbody elements
+- Don't do much other than break up table into logical sections
+- Wrap thead around your row of headers
+- wrap tbody around your main data
+- tfooter is rarely used but can be used when you have totals
+  or averages at the bottom of the data table.
+- Good for accessibility purposes
+
+colspan, rowspan
+- attribute for table elements to allow data to span columns or rows
+
+---
+Forms
+---
+
+The <form> element represents a section with interactive controls
+We fill a form with a collection of inputs, checkboxes, buttons, etc.
+
+form attributes
+- "action" attribute specifies where the form data should be sent
+- "method" attribute specifies which HTTP method should be used
+
+input element
+- no closing tags on input
+- input can be used to create a variety of different form controls
+- "type" attribute dramatically alters the input's behavior and appearance
+- "placeholder" attribute is text shown in input before you start typing
+
+labels
+- very important for accesibility of your forms
+- associates text with an input behind the scenes
+- to link label and input use the "for" attr and "id" attr
+  e.g.  <label for="cheese"></label>
+        <input type="checkbox" id="cheese">
+
+buttons
+- unless otherwise explicitly stated, a button within a form will submit the form
+- "type" attribute as submit will submit forms
+- if you don't want to submit then set the type attribute to button
+
+name attribute
+- used to send the data to the server as a pair
+- pretty much like a variable to signify the type of data
+- put name on every input that you use
+
+radio buttons
+- input type "radio"
+- associate group of radio buttons by giving them all the same "name" attribute
+- use "value" attribute to determine what value is sent to the server
+- value and id attr should be different from name attr
+
+<select> menu
+- dropdown menu of items
+- must have child option elements
+- each option element should have a different value attribute
+
+range & textarea
+- when exact value is not neccessary (range slider)
+- can add step to determine how many steps the range is divided into
+- textarea is a multi line text input
+  + rows and cols attributes to control size
+  + placeholder to add placeholder
+
+form validations
+- makes sure that the data provided in the forms meets the expectations
+- simple client validation is adding "required" attribute to input element
+- minlength/maxlength attributes also add some form of validation to text inputs
+- min/max attributes add range to numerical inputs
+- pattern attribute uses regex to determine if the input matches the
+  pattern definied by the regex expression

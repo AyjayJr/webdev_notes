@@ -1,0 +1,45 @@
+HTML Next Steps and Semantics
+=============================
+
+What is HTML5
+- The latest evolution of the standard that defines HTML
+- A standardized document describing how elements work
+- DOCTYPE is used to flag that you are using the latest version
+
+Block vs. Inline
+- Inline elements fit in alongside other elements e.g. span
+  - span used to single out certain elements for styling 
+    - doesn't take up a block of content
+- Block level elements take up a whole block of space e.g. div
+  - div is used to group content together
+
+Assortment of Elements
+- <hr> creates a border between content (horizontal rule)
+- <br> create a line break
+- <sup> superscript (inline)
+- <sub> subscript (inline)
+- <pre> preformatted, reserves spaces and line breaks
+
+HTML Entities 
+- Start with ampersand and end with a semicolon
+- Used to display special characters (e.g. copytight, trademark, etc.)
+- Browser interprets and renders the correct character instead
+- Some characters are vital to the syntax of HTML and therefore must use
+  entitiy codes to display them. (e.g. angled brackets, ampersand, etc.)
+
+Semantic Markup
+- Using elements that indicate purpose of elements
+- Instead of using all divs use things such as:
+    + header (header section of page)
+    + section (standalone section of a website)
+    + nav (navigational items)
+    + article
+    + footer
+    + main (dominant content that is repeated across pages)
+    + summary
+    + details
+    + aside (sidebars, callout boxes)
+    + time (should specify datetime attribute for machine readable time)
+    + figure (image or illustration often grouped with a caption)
+  to give meaning to your elements
+- Good for SEO and Accessibility

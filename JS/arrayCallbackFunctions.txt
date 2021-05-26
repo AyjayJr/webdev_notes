@@ -1,0 +1,82 @@
+== Callback Functions ==
+Built in array methods that require us to pass in functions.
+
+ForEach()
+---
+Accepts a callback function and runs the function once per element in the array.
+Was more common before the advent of the for of loop.
+Possible to define the function within the parantheses of the method.
+
+Map()
+---
+Creates a new array with the results of callin a function on each element.
+Used commonly to transform every element in an array and store in a new array.
+
+Arrow Functions
+---
+Newer syntax for defining functions.
+Syntactically compact alternative to a function expression.
+e.g.
+const add = function(x, y) {
+   return x + y;
+}
+becomes,
+const add = (x, y) => {
+   return x + y;
+}
+Basically removes function keyword from function expressions.
+Possible to make it more compact with implicit returns.
+When all a function does is return one value you can leave off the return keyword.
+You must also replace curly braces with parantheses.
+e.g.
+const add = (x,y) => (
+   x + y;
+)
+and even shorter,
+const add = (x,y) => x + y;
+These only work if there's only one statement in the body of the function.
+Arrow functions popup a lot when we're passing a function to another function.
+e.g.
+function validUserNames(strArray) {
+    const shortNames = strArray.filter(function(name) {
+        return name.length < 10;
+    });
+    return shortNames;
+}
+becomes,
+const validUserNames = strings => strings.filter(name => name.length < 10);
+This keywords work weird within arrow functions, they refer to the scope they were declared in.
+This is different from normal functions which refer to the way they were invoked.
+Rule of thumb is to not use an arrow function to define a method.
+
+
+setTimeout()/setInterval()
+---
+setTimeout expects a callback method and a number of miliseconds to wait before
+executing that callback method.
+setInterval is similar, it will call whatever method you pass to it after a set
+number of miliseconds.
+This makes it possible to repeat calling a method at a set interval.
+The return value of setInterval is an ID that points to the interval.
+Saving that ID and passing it to clearInterval is the only way to stop the interal.
+
+Filter()
+---
+Used to make a subset of an array and save it into a new array.
+Pass a callback that will serve as the criteria for the filter.
+The function passed to filter must return true or false.
+The elements that return true are then added into a new array.
+
+Every()/Some()
+---
+Every tests whether all the elements in the array pass the provided function.
+Every only returns true if ALL the elements pass the test function.
+Some is similar to every but returns true if ANY of the elements pass the test function.
+These both return a boolean value and require the function passed to it to return a boolean.
+
+Reduce()
+---
+Its main goal is to take an array and reduce it down to one value.
+Takes two parameters, first is an accumulator and the second is the current value.
+After each iteration the accumulator is equal to the value returned in the previous call.
+Can be used to find min or max values or things like the sum/product.

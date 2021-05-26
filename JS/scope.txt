@@ -1,0 +1,19 @@
+== Scope ==
+Can be thought of as variable visibilty.
+The location where a variable is defined dictates where it can be accessed.
+
+Function Scope
+---
+Variables defined in a function with let cannot be accessed outside the function.
+If two variables have the same name the variable with the closest scope wins.
+
+Block Scope
+---
+A block is anytime you see curly braces that are not a function.
+e.g. conditionals and loops
+Variables defined within blocks with let/const keyword are scoped to the block.
+If you use var keyword variables are scoped to the function but not the block.
+
+Lexical Scope
+---
+An inner function nested within some parent function has access to the variables defined within the scope of the parent function.

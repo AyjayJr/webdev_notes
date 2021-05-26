@@ -1,0 +1,45 @@
+== LOOPS ==
+Basics
+---
+Loops allow us to repeat code.
+There are multiple types of loops:
+- For loop
+- While loop
+- For...of loop
+- For...in loop
+
+For Loops
+---
+For loop syntax is the same as normal.
+e.g. for (let i = 0; i < n; i++) {}.
+Good for iterating over arrays.
+
+Nested Loops
+---
+We know how to nest loops.
+They are good for traversing multi dimensional arrays.
+
+While Loop
+---
+Same syntax as I'm used to.
+While loop are useful for when you are not sure how many times you have to loop.
+
+Break Keyword
+---
+Breaks out of loops.
+
+For...of Loop
+---
+Nice and easy way to iterate over arrays, not supported by IE.
+Syntax is:
+for (let variableName of iterable object) {}
+Good to use when you don't care about the value of i when iterating.
+Most commonly used with arrays but can be used for other iterable objects.
+Cannot be used to iterate over object literals.
+
+For...in Loop
+---
+Same syntax as for...of loop except uses in keyword.
+Used to iterate over object literals but will only give you the keys.
+Object.keys(), Object.values(), Object.entries() will give you object keys/values.
+Using the above methods with a for...of loop can get you the functionality u want.

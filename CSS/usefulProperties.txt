@@ -1,0 +1,39 @@
+== Opacity/Alpha ==
+Rgba can be used to make a color more transparent.
+The Alpha value goes from 0 - 1, 0 being fully transparent and 1 being solid.
+We can also use the alpha channel for hex colors and that ranges from 00 - FF.
+Opacity property can be used to determine the opacity of an entire element.
+Alpha will only apply to whatever portion of the element as opposed to opacity.
+
+== Position ==
+Position controls the position of the elements on the page.
+Use top, right, bottom, left values to configure the position once set.
+Static positioning is according to the normal flow of the document. (default)
+Relative keeps the element in the normal flow of the document but moves the element 
+relative to itself.
+- i.e. 50px to the left of its original spot.
+Absolute removes from normal flow and positions the element relative to its closest
+positioned ancestor.
+- If no positioned ancestor exists it is positioned relative to the body element.
+Fixed removes from the normal flow of the document and positions relative to viewport.
+- Can be used to create a nav bar that stays at the top when you scroll.
+Sticky has the effect of not being fixed until you scroll past a certain point and
+then hovering in a fixed position when scrolled past.
+
+== Transitions ==
+Allows us to animate the transition from one property value to another property value.
+Transition shorthand requires property name, duration, timing function, and delay.
+- Duration controls how long it takes for the animation to happen.
+- Delay controls how long the animation takes to start.
+- Timing function controls how the transition happens. (ease-in, ease-out, etc)
+Especially commonly used on hover effects.
+
+== Transform ==
+Allows use to manipulate the element on the page.
+- Rotate takes angles in degrees, radians, etc..
+- Scale takes a number.
+- Translate takes a length value for x and y in one of the typical css units.
+- Skew accepts angles the same as rotate.
+Transform origin changes what point the element is transformed around.
+Can use multiple transforms in a rule just separate them by a space.
+Transformations applies to the parent element and its content.
