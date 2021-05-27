@@ -70,3 +70,20 @@ e.g. typed or copy pasted characters.
 Avoid using keyup or keydown because it doesn't fire w copy/paste or talk to text
 and it also considers keys that don't modify the input value e.g. arrows/shift.
 
+Event Bubbling
+---
+With nested event handlers if one is activated the event will "bubble" up and activate the other event handlers as well, but only if they are listening for
+the same event.
+e.g. a button with a click listener is nested inside a div that also has a click
+listener. When you click the button the div will also fire it's event handler.
+To stop this behavior you use the stopPropogation() method on the event object.
+Make sure to capture the event argument in the callback function for access to 
+the event object.
+
+Event Delegation
+---
+Adding an event listener to an element that is not immediately apparent.
+You can add an event listener on a container where new elements will be created
+and use that to target the new elements.
+e.g. event listener on a UL where LIs will be created.
+This information is stored in the event object under the target property.
