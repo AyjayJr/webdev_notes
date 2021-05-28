@@ -30,3 +30,19 @@ the first action is done.
 This can be done through nesting or by including a callback to the function you want to happen
 after second within the first function.
 This is very common when dealing when dealing with APIs and server requests.
+
+Promises
+---
+An object that represents the eventual completion or failure of an async operation.
+Promises can have three states, pending, resolved, or rejected.
+This allows you to run code whether the promise has been resolved or rejected.
+You do this by attaching callbacks to the promise itself.
+Syntax:
+request
+   .then(() => {
+   console.log('resolved')'
+   })
+   .catch(() => {
+   console.log('rejected');
+   })
+If the promise is resolved the then callback runs, otherwise catch callback runs.
