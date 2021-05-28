@@ -1,0 +1,32 @@
+== Asynchronous JavaScript ==
+
+The Call Stack
+---
+Mechanism the interpreter uses to keep track of its place in a script
+that calls multiple functions.
+How JS knows what function is being run and where it was called from.
+Stack is a last in first out data structure.
+How it works:
+- When a function is called the interpreter adds it to the call stack.
+- Any functions that are called by that function are added to the call stack further up.
+- When the current function is finished, the interpreter takes it off the stack
+and resumes execution where it left off in the last code listing.
+Chrome debugger is a good tool for visualizing the call stack.
+Find debugger in the sources tab of chrome dev tools.
+
+WebAPIs & Single Threadedness
+---
+Single thread means JS is running at most one line of code at a time.
+Although this is the case JS leverages the browser to handle certain tasks for it.
+Browsers come with Web APIs that are able to handle certain tasks in the background.
+e.g. making requests or setTimeout
+The call stack reacognizes these web api functions and passes them off to the browser.
+Once the browser finishes these tasks they return and are pushed onto the stack.
+
+Callback Hell
+---
+Lots of times we want one action to happen and then have another action happen only once
+the first action is done.
+This can be done through nesting or by including a callback to the function you want to happen
+after second within the first function.
+This is very common when dealing when dealing with APIs and server requests.
