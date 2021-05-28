@@ -46,3 +46,27 @@ request
    console.log('rejected');
    })
 If the promise is resolved the then callback runs, otherwise catch callback runs.
+The power of promises is that you can chain thens together and use a single catch for all of them.
+To chain thens you need to return the promise value within the then callback functions.
+This reduces nesting and avoids callback hell.
+Creating a Promise:
+new Promise((resolve, reject) => {
+   if (something good) {
+      resolve();
+   } else {
+      reject();
+   }
+})
+If at any point you call resolve that promise will be resolved and the same for reject.
+
+Async Functions
+---
+A newer syntax for working with async code, syntax sugar for promises.
+Async and Await are the two main keywords.
+The async keyword signifies that a function is asynchronous and will always return a promise.
+If an async function returns a value then the promise will be resolved with that value.
+To reject the promise you have to throw an error using throw keyword.
+The await keyword will wait for a promise to be resolved before continuing execution.
+Use this to pause execution untill after a promise has been resolved.
+This removes the need to use then().
+To reject promises in an async function you have to use try and catch.
