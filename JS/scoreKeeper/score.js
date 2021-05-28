@@ -18,8 +18,8 @@ btnP1.addEventListener('click', () => {
    if (scoreP1.innerText == winningScore) {
       btnP1.setAttribute('disabled', true);
       btnP2.setAttribute('disabled', true);
-      scoreP1.style.color = 'green';
-      scoreP2.style.color = 'red';
+      scoreP1.classList.add('has-text-success');
+      scoreP2.classList.add('has-text-danger');
    }
 })
 
@@ -30,8 +30,8 @@ btnP2.addEventListener('click', () => {
    if (scoreP2.innerText == winningScore) {
       btnP1.setAttribute('disabled', true);
       btnP2.setAttribute('disabled', true);
-      scoreP1.style.color = 'red';
-      scoreP2.style.color = 'green';
+      scoreP1.classList.add('has-text-danger');
+      scoreP2.classList.add('has-text-success');
    }
 })
 
@@ -41,6 +41,7 @@ reset.addEventListener('click', () => {
    scoreP2.innerText = '0';
    btnP1.removeAttribute('disabled');
    btnP2.removeAttribute('disabled');
-   scoreP1.style.color = 'black';
-   scoreP2.style.color = 'black';
+   scoreP1.classList.remove('has-text-success', 'has-text-danger');
+   scoreP2.classList.remove('has-text-success', 'has-text-danger');
+
 })
