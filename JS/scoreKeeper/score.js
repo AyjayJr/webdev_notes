@@ -18,6 +18,8 @@ btnP1.addEventListener('click', () => {
    if (scoreP1.innerText == goal) {
       btnP1.setAttribute('disabled', true);
       btnP2.setAttribute('disabled', true);
+      scoreP1.style.color = 'green';
+      scoreP2.style.color = 'red';
    }
 })
 
@@ -28,6 +30,8 @@ btnP2.addEventListener('click', () => {
    if (scoreP2.innerText == goal) {
       btnP1.setAttribute('disabled', true);
       btnP2.setAttribute('disabled', true);
+      scoreP1.style.color = 'red';
+      scoreP2.style.color = 'green';
    }
 })
 
@@ -37,4 +41,6 @@ reset.addEventListener('click', () => {
    scoreP2.innerText = '0';
    btnP1.removeAttribute('disabled');
    btnP2.removeAttribute('disabled');
+   scoreP1.style.color = 'black';
+   scoreP2.style.color = 'black';
 })
