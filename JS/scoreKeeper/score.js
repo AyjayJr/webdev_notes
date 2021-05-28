@@ -1,3 +1,4 @@
+// TODO group p1 and p2 info into objects
 const btnP1 = document.querySelector('#btn-p1'); // Player 1
 const btnP2 = document.querySelector('#btn-p2'); // Player 2
 const scoreP1 = document.querySelector('#score-p1'); // P1 Score
@@ -11,6 +12,7 @@ playTo.addEventListener('change', () => {
    winningScore = playTo.options[playTo.selectedIndex].value;
 })
 
+// TODO refactor p1 and p2 functionality to reduce duplication
 // Update P1 score when button is clicked
 btnP1.addEventListener('click', () => {
    scoreP1.innerText++;
