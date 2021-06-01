@@ -1,4 +1,6 @@
 // TODO group p1 and p2 info into objects
+// TODO fix bug where if you change score to win mid game it won't register correct winner
+
 const btnP1 = document.querySelector('#btn-p1'); // Player 1
 const btnP2 = document.querySelector('#btn-p2'); // Player 2
 const scoreP1 = document.querySelector('#score-p1'); // P1 Score
@@ -43,7 +45,6 @@ reset.addEventListener('click', () => {
    scoreP2.innerText = '0';
    btnP1.removeAttribute('disabled');
    btnP2.removeAttribute('disabled');
-   scoreP1.classList.remove('has-text-success', 'has-text-danger');
+   scoreP1.classList.remove('has-text-success', 'has-text-danger'); 
    scoreP2.classList.remove('has-text-success', 'has-text-danger');
-
 })

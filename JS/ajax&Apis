@@ -1,0 +1,44 @@
+== Ajax and APIs ==
+AJAX stands for: 
+- Asynchronous 
+- JavaScript
+- And
+- XML
+It refers to making requests behind the scenes after the page has already been loaded.
+When we are making requests with JavaScript we are usually just looking for data.
+Even though the X stands for XML we almost always use JSON.
+
+API stands for:
+- Application
+- Programming 
+- Interface 
+A broad term that refers to an interface that allows one piece of software to interact
+with another piece of software.
+A web API is an API that is web based.
+They are end points left exposed to respond to requests with information for software to consume.
+
+
+JSON
+---
+Stands for:
+- Java
+- Script
+- Object
+- Notation
+A way of format for data that is consistent and predictable.
+Based on JavaScript objects and object notation.
+Has Key and Value pairs.
+You can parse JSON in other languages like python/ruby. 
+JavaScript has a built-in function to turn JSON into valid JavaScript, JSON.parse().
+To turn a JS object into valid JSON use JSON.stringify().
+
+Postman
+---
+Postman is a tool for making API requests.
+When you send requests you recieve a body which is the data we requested.
+We also get headers which is basically the metadata for the request.
+Also we get status codes, which are just quick indicators of if the request was good/bad.
+Any code starting with 2 is a successful code.
+Any code starting with 3 is a redirect code.
+Any code starting with 4 is a client side error code.
+Any code starting with 5 is a server side error code. 
