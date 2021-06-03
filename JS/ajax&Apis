@@ -34,11 +34,54 @@ To turn a JS object into valid JSON use JSON.stringify().
 
 Postman
 ---
-Postman is a tool for making API requests.
-When you send requests you recieve a body which is the data we requested.
-We also get headers which is basically the metadata for the request.
-Also we get status codes, which are just quick indicators of if the request was good/bad.
-Any code starting with 2 is a successful code.
-Any code starting with 3 is a redirect code.
-Any code starting with 4 is a client side error code.
-Any code starting with 5 is a server side error code. 
+Postman doesn't do anything that we couldn't already do,
+But it is a great tool get for making API requests.
+Used for test APIs that you haven't and haven't created.
+There are many HTTP verbs signifying different types of requests.
+
+Get Requests
+---
+Sending GET requests to some url will yield some data.
+This data comes in multiple packets of information such as:
+- The body is the data we requested from the API.
+  > A webpage body will yield html/css/js
+  > An endpoint will deliver data for interaction between systems.
+- The status codes represent the following: 
+  > Codes starting with 2 are successful codes.
+  > Codes starting with 3 are redirect codes.
+  > Codes starting with 4 are client side error codes.
+  > Codes starting with 5 are server side error codes. 
+   + You can view these codes in postman or browser dev tools network tab.
+- The headers are basically the metadata for the request.
+- e.g.
+  > Content Type
+  > Date accessed
+  > Last modified
+  > Server type
+
+Query Strings & Headers
+---
+Query strings are information we can provide as part of a URL that will impact what we get back.
+They are represented as key/value pairs.
+APIs expect certain key/value pairs to be passed to it.
+They use the syntax "?{varName}=:shows"
+There can be multiple fields that we are searching for.
+Postman allows use to enter params as a key/value pair and it will build query string for you.
+Headers not only are recieved from requests, we can set headers on our own requests.
+Headers may signify what content type you want in return among other things.
+
+Making XMR
+---
+XML Http Request
+Horrible, original way of doing it.
+Does not support promises.
+First you must create a new XMLHttpRequest object.
+Then you must attach callback functions to the .onload and .onerror properties.
+Lastly you .open() your request and .send().
+The response data will then be attached to the XMLHttpRequest object.
+Newer options include fetch.
+
+Fetch API
+---
+Newer way of making requests.
+Supports promises so we don't have to worry about callbacks.
