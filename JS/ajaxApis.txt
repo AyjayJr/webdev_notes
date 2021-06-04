@@ -85,3 +85,29 @@ Fetch API
 ---
 Newer way of making requests.
 Supports promises so we don't have to worry about callbacks.
+Fetch returns a promise containing things like headers, status codes, etc.
+When the promise gets returned it will be resolved for existing endpoints
+and rejected if you request a non existent endpoint.
+From there you can chain on .then() to run when resolved and .catch() to
+run when rejected.
+One caveat about fetch is that it resloves once the headers come back you
+don't necessarily have the data yet.
+To access data you must attach .json() method to be resolved.
+.json() returns a promise as well.
+Writing fetch in an asynchronous further helps to simplify the process.
+Wrap async code in try and catch to catch errors.
+
+Axios
+---
+Axios is a library built over fetch that further improves the syntax of
+making http requests.
+Easiest way to incorporate Axios is through cdn link.
+axios.get returns a promise that is only resolved once all data arrives.
+The data is already parsed within the returned promise.
+
+Setting Headers
+---
+When we make a GET request sometimes we want to specify that we only want
+a certain type of data whether it be json or html.
+In axios.get() there's a second argument you can pass in with config info.
+The second arg should be an object that specifies certain info.
