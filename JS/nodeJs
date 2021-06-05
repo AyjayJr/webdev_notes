@@ -1,0 +1,42 @@
+== Node JS ==
+Node is a JavaScript runtime that executes code outside of the browser.
+Allows us to use JS syntax to write server-side code.
+
+Uses
+---
+Uses for Node are the following,
+- web servers
+- command line toold
+- native apps (vscode/slack are written with node)
+- video games (crosscode)
+
+Differences
+---
+Since node is not run in the browser we don't have access to all the
+browser stuff.
+e.g. window, document, and DOM APIs
+Node instead includes many features that don't exist in the browser.
+These modules help us interact with the OS and files/folders.
+
+Running files
+---
+Create scripts in a .js file.
+Run scripts by typing node {filename}.
+Typing node on its own opens a REPL.
+
+Process and Argv
+---
+Process is an object in the global scope that provides information about,
+and control over, the current nodejs process.
+This includes the version of node, as well as methods for i/o to console.
+process.argv returns an array of the command line arguments passed when 
+the nodejs process was launched.
+
+File System Module
+---
+fs is the name of the file system module.
+Many of the fs methods come in both sync and async forms.
+Rememeber sync means that it will halt all computation until a response
+is recieved.
+Async will allow the code to continue running and will run code depending
+on whether or not the response was resolved or rejected.
