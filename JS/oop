@@ -1,0 +1,65 @@
+== JavaScripts Version of OOP ==
+
+Prototypes
+---
+Prototypes are the mechanism by which objects inherit features.
+Objects can have a prototype object which acts as a template object.
+They typically contain a bunch of commonly used methods.
+eg. Array.prototype.pop();
+Each array contains a property called __proto__ which is a reference to
+the actual Array.prototype.
+It's possible to add your own methods to a prototype so that it is shared
+amongst objects of similar type.
+Not recommended to do so tho.
+
+Intro to OOP
+---
+Designing code by breaking it into distinct objects that interact.
+Use new keyword to make new object.
+I'm already familiar with OOP.
+
+Factory Functions
+---
+Functions that create objects.
+Used to mitigate code duplication when creating multiple objects with 
+the same properties and/or methods.
+Returns an object with the properties and/or methods attached to it.
+Not the way most people create objects.
+One of the shortcomings is that it makes unique versions of methods for
+every object created.
+
+Constructor Functions
+---
+More widely used process for creating objects.
+Must use new keyword with constructor functions to create new object.
+Constructor functions set the values of that new object.
+Instead of making unique versions of functions, you must add the method
+to the prototype of the object outside of the object itself.
+Remember to not use arrow functions with these because this keyword
+behaves differently within arrow functions.
+(Arrow functions inherit this from parent scope)
+
+Classes
+---
+With classes you don't have to add methods to the prototype manually.
+Use class keyword to create class.
+Each class must have a constructor function which runs right when you
+instantiate a new object.
+e.g.
+class Color {
+   constructor(r, g, b) {
+      this.r = r;
+      this.g = g;
+      this.b = b;
+   }
+}
+Write methods within class to automatically assign them to the prototype.
+
+Extends and Super
+---
+Both of these keywords have to do with inheritance.
+Use extends to inherit functionality from a parent class.
+You can overwrite parent functions within the child class.
+Super keyword will reference the parent class from within the child.
+e.g. you can call super(x, y) from child constructor to invoke the parent
+constructor on your object.
