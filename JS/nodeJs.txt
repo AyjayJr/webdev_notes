@@ -40,3 +40,6 @@ Rememeber sync means that it will halt all computation until a response
 is recieved.
 Async will allow the code to continue running and will run code depending
 on whether or not the response was resolved or rejected.
+FS is not a thing by defaullt, we must first require it.
+e.g. const fs = require('fs');
+This module contains methods that handle file creations/deletions etc.

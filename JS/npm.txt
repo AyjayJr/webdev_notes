@@ -1,0 +1,35 @@
+== NPM and Modules ==
+Modules are basically libraries of code like in other languages.
+To include a module you must require it.
+In order for one script to read another scripts methods you must use
+module.exports.
+Module.exports is an object that methods can be attached to for use in 
+another script.
+Only methods that are exported will be visible to other scripts.
+You can use exports in place of module.exports for shorter syntax.
+
+NPM
+---
+Massive library of packages that other people have written.
+A command line tool to install and manage those packages.
+The command npm i ${packageName} will install packages.
+This command will install a module locally in the folder specified.
+It's possible to install things globally by adding -g flag.
+This is usually done for command line tools.
+
+Package.json
+---
+This is a special file in every node app that contains metadata.
+One of the most important bits of info in here are the dependencies.
+You need to install all these dependencies to use the initial program.
+Usually you will create this file with an NPM command, npm init.
+Init will walk you through creating a package.json file.
+Now when a module is installed in the same folder it will automatically
+be added to the dependencies list.
+
+Installing Dependencies
+---
+Running npm install in a folder with a package.json will automatically
+install all the dependencies.
+This will create a node_modules directory for you.
+This is a very common workflow.
