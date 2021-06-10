@@ -1,0 +1,15 @@
+== Express ==
+Express is a miniamlist web framework for Node
+It's just an npm package that we install that helps bulid webapps.
+Express helps us:
+- Start up server to listen for http requests
+- Parse incoming requests
+- Match those requests to particular routes
+- Craft our http response and associated content
+A library is code written by others that you decide where you want to 
+incorporate it into your code.
+A framework tells you where to plug in your code and takes control of 
+most of the aspects of development.
+Express is very close to a library in how much control it leaves in the 
+hands of the developer.
+
