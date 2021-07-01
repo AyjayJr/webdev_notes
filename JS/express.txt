@@ -13,3 +13,20 @@ most of the aspects of development.
 Express is very close to a library in how much control it leaves in the 
 hands of the developer.
 
+Routing
+---
+Common term that refers to taking incoming requests and matching
+that to some code and some response.
+Matches the url path to some response page.
+We have only been exposed to exact match paths.
+Sometimes we want to respond to some pattern in a path.
+We use a colon to specify a variable in express. 
+e.g. reddit.com/r/:subredditname
+Express adds a property to the request object called params.
+Params contains a property named subreddit and the value is set to
+whatever string is passed in the url in that pattern.
+
+Query Strings
+---
+The request object that express creates stores info about they query string.
+This can be accessed and used in our code.

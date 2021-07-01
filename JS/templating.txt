@@ -1,0 +1,45 @@
+== Dynamic HTML ==
+
+Templating
+---
+Defines patterns a webpage that we can dynamically modify.
+For example a search template that gives different results each time.
+Ability to add loops and conditional logic to html pages.
+Many templating languages to choose from.
+e.g. Jade, Pug, Nunjucks, Ejs
+
+# Most templating notes are done in templatePractice code
+
+EJS
+---
+A templating language very similar to javascript.
+EJS allows for dynamic content within html files.
+EJS contains its own special open and closing tags to denote content.
+
+Basic EJS Syntax
+---
+These tags indicate to ejs that the following content is not html.
+Each get evaluated differently.
+<% 'Scriptlet' tag, for control-flow, no output
+<%_ ‘Whitespace Slurping’ Scriptlet tag, strips all whitespace before it
+<%= Outputs the value into the template (HTML escaped)
+<%- Outputs the unescaped value into the template
+<%# Comment tag, no execution, no output
+<%% Outputs a literal '<%'
+%> Plain ending tag
+-%> Trim-mode ('newline slurp') tag, trims following newline
+_%> ‘Whitespace Slurping’ ending tag, removes all whitespace after it
+
+Passing Data
+---
+Usually dynamic content is some sort of data retrieved from a database.
+Generally we don't want much logic within the templates.
+First do logic in the js file and then pass it to the template as an object.
+Very common for parsing api data and embedding into page.
+
+Conditionals
+---
+Must use <% tag.
+This creates a conditional statement with no output.
+It will display HTML only when the conditional is true.
+We can use loops to iterate a bunch of similar content.
