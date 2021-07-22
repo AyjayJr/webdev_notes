@@ -43,3 +43,18 @@ Must use <% tag.
 This creates a conditional statement with no output.
 It will display HTML only when the conditional is true.
 We can use loops to iterate a bunch of similar content.
+
+Serving Static Files
+---
+This refers to serving things such as css and js files that we want to include in our
+response to http requests.
+With express we use express.static() and app.use().
+For static we pass in a folder that we want to serve our files from.
+This is something known as a middleware which runs between all requests.
+Served files are accessible from the client side.
+
+EJS Partials
+---
+A way to abstract away portions of templates that are used multiple times.
+Pretty much a template for templates.
+

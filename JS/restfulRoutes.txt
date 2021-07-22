@@ -1,0 +1,33 @@
+== RESTful Routing ==
+
+Get vs. Post
+---
+Get requests:
+- Used to retrieve info
+- Data sent via query string (text)
+- Info visibile in URL
+- Limited by characters allowed in URL
+Post Requests:
+- Used to post data to server
+- Used to write/create/update
+- Data sent via request body
+- Can send any data (JSON)
+
+Express Post Routes
+---
+Post data is stored in the req.body.
+By default body in undefined, requires middleware to handle.
+You must tell express to parse URL data wtih the following line:
+app.use(express.urlencoded({ extended: true }));
+To parse JSON data use the following line:
+app.use(express.json());
+
+REST
+---
+Representational State Transfer, an architectural style.
+A set of guidelines on how clients and servers should communicate.
+Treating data on server side as resources that can be CRUDed.
+CRUD = Create Read Update Destroy.
+Client and server are separated.
+Uniform interface that consists of a consistent URL pattern matched with
+different HTTP verbs.
