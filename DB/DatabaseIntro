@@ -1,0 +1,29 @@
+== Introduction to Databases ==
+
+Why use a database?
+---
+Databases can handle large amounts of data efficiently.
+Provide easy tools for CRUD operations.
+Security and access control over data (DBMS).
+Generally scale well.
+
+SQL vs. NoSQL
+---
+SQL = Structured Query Language.
+SQL dbs are Relational Databases.
+Each table references each other.
+Pre-defined schema for data.
+Everything must conform to a pattern.
+NoSQL = No query language
+Very diverse category of databases.
+No pre-defined schema for data.
+A lot more flexibility for data storage.
+
+Why use MongoDB?
+---
+Mongo is commonly used with node and express MEAN/MERN stack.
+Easy to get started.
+Pairs particularly well with JavaScript.
+Popularity means there is a strong dev community.
+
+
