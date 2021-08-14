@@ -26,4 +26,9 @@ Easy to get started.
 Pairs particularly well with JavaScript.
 Popularity means there is a strong dev community.
 
+BSON?
+---
+BSON stands for Binary JSON.
+BSON was invented to optimize JSON for speed and space.
+We can write regular JSON but mongo will store as BSON.
 
