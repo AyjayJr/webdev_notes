@@ -32,7 +32,7 @@ BSON stands for Binary JSON.
 BSON was invented to optimize JSON for speed and space.
 We can write regular JSON but mongo will store as BSON.
 
-Inserting with Mongo
+Inserting with Mongo (C)
 ---
 Insertion in Mongo inserts data into a collection.
 This is a way to categorize and group similar data together
@@ -44,7 +44,7 @@ When inserted mongo auto generates a primary key called "_id".
 insertMany() will take an array of objects.
 insert() will take either an array of objects or a single object.
 
-Querying with Mongo
+Querying with Mongo (R)
 ---
 Used to find relevant data within the db.
 db.collection.find() w no args will return all data within a collection.
@@ -53,7 +53,7 @@ db.collection.find({breed: "corgi"}) will return objects that match corgi breed.
 findOne() will return exactly one document that matches your args.
 You can also pass in some logic with find but we will get back to that later.
 
-Updating with Mongo
+Updating with Mongo (U)
 ---
 Update is usually most annoying.
 Takes two steps, find thing to update, how we want to update.
@@ -62,3 +62,23 @@ Update has 2 arguments first what to find then how to update.
 eg. updateOne({name: "Charlie"}, <operator>: {<field>: <value>,...})
 Update operators such as $set, $rename, etc. will determine how to update.
 
+Deleting with Mongo (D)
+---
+Two delete methods, deleteOne() and deleteMany().
+Similar to the syntax of the find methods.
+Takes an object that specifies a match of one of the documents in the collection.
+If you pass an empty object to deleteMany() it will delete everything.
+
+Additional Operators
+---
+Sometimes you want to use logic in your functions.
+Some objects may be nested within other objects, use . operator to access.
+Things like find all dogs over the age of 5 need to use $gt, $lt, $gte, $lte.
+Use with the syntax { age: { $gte: 5 }}.
+Notice you nest the operator within it's own object.
+$in is a useful operator that matches based on an array of values.
+e.g. db.dogs.find({ age: { $in: [5, 6, 7, 8] }})
+The above example will find objects that have an age of 5, 6, 7, or 8.
+You can use multiple operators at the same time as well.
+e.g. db.dogs.find({ age: { $gte: 5}, breed: {$in: ["Chihuahua, "Corgi"] }})
+This will find all dogs greater than or equal to five that are chihuahuas or corgis.
