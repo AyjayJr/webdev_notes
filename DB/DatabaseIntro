@@ -32,3 +32,33 @@ BSON stands for Binary JSON.
 BSON was invented to optimize JSON for speed and space.
 We can write regular JSON but mongo will store as BSON.
 
+Inserting with Mongo
+---
+Insertion in Mongo inserts data into a collection.
+This is a way to categorize and group similar data together
+db.collection.insertOne() to insert one object into a collection of your choosing.
+If the collection doesn't exist mongo will automatically create it.
+e.g. db.dogs.insertOne() will create and insert into a dogs collection.
+e.g. db.dogs.insertOne({name: "Charlie", age: 3, breed: "Corgi", catFriendly: true})
+When inserted mongo auto generates a primary key called "_id".
+insertMany() will take an array of objects.
+insert() will take either an array of objects or a single object.
+
+Querying with Mongo
+---
+Used to find relevant data within the db.
+db.collection.find() w no args will return all data within a collection.
+Pass in an object with a key/value pair to find objects that match that key/value.
+db.collection.find({breed: "corgi"}) will return objects that match corgi breed.
+findOne() will return exactly one document that matches your args.
+You can also pass in some logic with find but we will get back to that later.
+
+Updating with Mongo
+---
+Update is usually most annoying.
+Takes two steps, find thing to update, how we want to update.
+updateOne()/updateMany() work the same as their find counterparts.
+Update has 2 arguments first what to find then how to update.
+eg. updateOne({name: "Charlie"}, <operator>: {<field>: <value>,...})
+Update operators such as $set, $rename, etc. will determine how to update.
+
