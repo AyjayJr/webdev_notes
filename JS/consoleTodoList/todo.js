@@ -7,7 +7,7 @@ let deletedItem;
 const todo = [];
 
 while (input !== "quit") {
-   input = prompt("What would you like to do?\nnew - enter a new todo item\nlist - list todo items\delete - delete todo items\nquit - quit the application\n");
+   input = prompt("What would you like to do?\n");
    if (input === "new") {
       newItem = todo.push(prompt("Enter new todo item."));
       console.log(`${todo[newItem-1]} added to the list.`);
