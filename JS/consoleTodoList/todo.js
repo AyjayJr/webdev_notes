@@ -24,4 +24,4 @@ while (input !== "quit") {
    }
 }
 
-Console.log("OK, YOU QUIT THE APP!");
+console.log("OK, YOU QUIT THE APP!");
